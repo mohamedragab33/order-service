@@ -19,8 +19,8 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface OrderMapper {
 
-    @Mapping(source = "orderLineItemsReq" , target = "orderLineItems")
-     Order toOrder (OrderReq orderReq);
+//    @Mapping(source = "orderLineItemsReq" , target = "orderLineItems")
+//     Order toOrder (OrderReq orderReq);
 
 
     OrderMapper INSTANCE = Mappers.getMapper(OrderMapper.class);
