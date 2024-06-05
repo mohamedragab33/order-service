@@ -23,10 +23,8 @@ public class OrderService {
         Order order = Order.builder()
                 .orderLineItems(orderMapper.toOrderLineItems(orderReq.orderLineItemsReq()))
                 .orderNumber(UUID.randomUUID().toString()).build();
-
+        orderRepository.save(order);
         log.info("{} is Created successfully ", order.getOrderNumber());
-        log.info(" {} order orderLineItems " , order.getOrderLineItems().stream().findFirst());
-
     }
 
 
