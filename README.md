@@ -54,7 +54,7 @@ The `order-service` is designed to be part of a microservices ecosystem. It inte
 1. **Clone the repository**:
 
     ```bash
-    git clone https://github.com/your-repository/order-service.git
+    git clone https://github.com/mohamedragab33/order-service.git
     cd order-service
     ```
 
@@ -112,6 +112,45 @@ The `order-service` is designed to be part of a microservices ecosystem. It inte
 
 - **Response**: `201 Created`
 
+### Get All Orders
+
+- **URL**: `/orders`
+- **Method**: `GET`
+- **Response**: `200 OK`
+- **Response Body**:
+
+    ```json
+    [
+      {
+        "id": 1,
+        "orderNumber": "a1b2c3d4",
+        "orderLineItems": [
+          {
+            "sku": "item-sku-1",
+            "price": 19.99,
+            "quantity": 2
+          },
+          {
+            "sku": "item-sku-2",
+            "price": 29.99,
+            "quantity": 1
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "orderNumber": "e5f6g7h8",
+        "orderLineItems": [
+          {
+            "sku": "item-sku-3",
+            "price": 9.99,
+            "quantity": 3
+          }
+        ]
+      }
+    ]
+    ```
+
 ### Get Order
 
 - **URL**: `/orders/{orderId}`
@@ -145,5 +184,3 @@ The `order-service` is designed to be part of a microservices ecosystem. It inte
 3. Commit your changes (`git commit -m 'Add some feature'`).
 4. Push to the branch (`git push origin feature/your-feature`).
 5. Open a pull request.
-
-
